@@ -14,7 +14,7 @@ import string
 from PyQt5.QtNetwork import QTcpSocket, QAbstractSocket
 
 # Server IP and port (must match server settings)
-SERVER_IP = "35.224.144.124"  # Replace with the actual server's IP address
+SERVER_IP = "34.171.41.219"  # Replace with the actual server's IP address
 SERVER_PORT = 3389
 
 start_url = ""
