@@ -396,7 +396,7 @@ class Window(QStackedWidget):
     def show_web_view(self):
         # Switch to the web view screen
         self.web_view.setUrl(QUrl(start_url))
-        self.center_label.setText('<span style = "color: #6666ff">Target page:⠀</span>' + "\t" + f'<span style = "color: #3399ff">{end_title}</span>')
+        self.center_label.setText('<span style = "color: #6666ff">Target page:⠀</span>'+f'<span style = "color: #3399ff">{end_title}</span>')
         self.bottom_label.setText(page_summary())
         global start_time, end_time, timer
         start_time = time.time()
