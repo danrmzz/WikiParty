@@ -61,7 +61,7 @@ class Window(QStackedWidget):
             start_layout.addWidget(self.image_label)
 
         # Create a QLabel to add text
-        self.start_label = QLabel("Welcome to <b>WikiParty</b>! You are given a random Wikipedia page with the goal of reaching a destination page using only the hyperlinks present on each page.<br><br> Enter your username:")
+        self.start_label = QLabel("Welcome to <b>WikiParty</b>! You are given a random Wikipedia page with the goal of reaching a destination page using only the hyperlinks present on each page. <br>You have <b>5 minutes</b> to get there!<br><br> Enter your username:")
         self.start_label.setAlignment(Qt.AlignCenter)
         self.start_label.setWordWrap(True)  # Enable word wrapping
         start_layout.addWidget(self.start_label)  # Add the label to the button screen layout
@@ -177,19 +177,19 @@ class Window(QStackedWidget):
         # Create labels for left, center, and right text
         self.left_label = QLabel("Clicks: 0")
         self.left_label.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
-        left_font = QFont("Poppins", 14)
+        left_font = QFont("Poppins", 16)
         self.left_label.setFont(left_font)
         self.left_label.setStyleSheet("color: #2159ff;")
 
         self.center_label = QLabel("")
         self.center_label.setAlignment(Qt.AlignCenter)
-        center_font = QFont("Poppins", 16, QFont.Bold)  # Set font weight to bold
+        center_font = QFont("Poppins", 18, QFont.Bold)  # Set font weight to bold
         self.center_label.setFont(center_font)
         self.center_label.setStyleSheet("color: #2159ff;")
 
         self.right_label = QLabel("00:00")
         self.right_label.setAlignment(Qt.AlignRight | Qt.AlignVCenter)
-        right_font = QFont("Poppins", 14)
+        right_font = QFont("Poppins", 16)
         self.right_label.setFont(right_font)
         self.right_label.setStyleSheet("color: #2159ff;")
 
@@ -198,7 +198,7 @@ class Window(QStackedWidget):
         self.top_label_layout.addWidget(self.center_label)
         self.top_label_layout.addWidget(self.right_label)
 
-        self.top_label.setFixedHeight(60)  # Set a fixed height for the top label
+        self.top_label.setFixedHeight(80)  # Set a fixed height for the top label
         web_view_layout.addWidget(self.top_label)  # Add the top label to the web view layout
 
         self.bottom_label = QLabel("")
@@ -396,7 +396,7 @@ class Window(QStackedWidget):
     def show_web_view(self):
         # Switch to the web view screen
         self.web_view.setUrl(QUrl(start_url))
-        self.center_label.setText(end_title)
+        self.center_label.setText('<span style = "color: #6666ff">Target page:⠀</span>' + "\t" + f'<span style = "color: #3399ff">{end_title}</span>')
         self.bottom_label.setText(page_summary())
         global start_time, end_time, timer
         start_time = time.time()
@@ -501,7 +501,7 @@ def main():
         poppins_families = QFontDatabase.applicationFontFamilies(poppins_regular_id)
         if poppins_families:
             poppins_family = poppins_families[0]
-            app.setFont(QFont(poppins_family, 12))  # Apply the Poppins Regular font globally
+            app.setFont(QFont(poppins_family, 12))
         else:
             print("No font families available for Poppins Regular.")
     else:
