@@ -1,3 +1,6 @@
+## Demo Video:
+[![Watch the demo](https://img.youtube.com/vi/nXK9TCG8yMM/maxresdefault.jpg)](https://www.youtube.com/watch?v=nXK9TCG8yMM)
+
 ## Inspiration:
 We wanted to create an engaging multiplayer game that combines knowledge and strategy, where players race from one random Wikipedia page to another using only the hyperlinks on each page. Instead of everyone just pulling up Wikipedia on their own browsers, our game creates a shared, synchronized experience where all players start at the same time and work toward the same goal. This setup makes the competition more exciting, with built-in features like timers and click tracking, offering a far more structured and dynamic challenge than simply browsing on your own.
 
