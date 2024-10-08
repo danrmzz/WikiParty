@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="wikiparty_logo.png" alt="WikiParty Logo" width="400" />
+</p>
+
 ## Inspiration:
 We wanted to create an engaging multiplayer game that combines knowledge and strategy, where players race from one random Wikipedia page to another using only the hyperlinks on each page. Instead of everyone just pulling up Wikipedia on their own browsers, our game creates a shared, synchronized experience where all players start at the same time and work toward the same goal. This setup makes the competition more exciting, with built-in features like timers and click tracking, offering a far more structured and dynamic challenge than simply browsing on your own.
 
